@@ -77,7 +77,7 @@ namespace XMLMenuWriter
 
     #region Serialization Classes
     [XmlRoot("menu")]
-    partial class Menu
+    public class Menu
     {
         [XmlElement("id")]
         public string Id { get; set; }
@@ -86,7 +86,7 @@ namespace XMLMenuWriter
         public List<Item> Items { get; set; }
     }
 
-    partial class Item
+    public class Item
     {
         [XmlElement("displayName")]
         public string Name { get; set; }
@@ -98,7 +98,7 @@ namespace XMLMenuWriter
         public Menu SubMenu { get; set; }
     }
 
-    partial class Path
+    public class Path
     {
         [XmlAttribute("value")]
         public string Value { get; set; }
